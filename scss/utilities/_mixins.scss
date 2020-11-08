@@ -1,0 +1,35 @@
+//Block Quotes
+@mixin blockquote {
+    font-size: 1.5em;
+    font-weight: 300;
+    font-style: italic;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 8px solid $primary-color;
+    border-radius: 5px;
+}
+
+// Column colors
+@mixin column-color($map) {
+    @each $col, $color in $map {
+        &-#{$col} {
+            background-color: $color;
+        }
+    }    
+}
+
+//Flex Basis
+@mixin column-flexb($map) {
+    @each $col, $percent in $map {
+        &-#{$col} {
+            flex-basis: $percent;
+        }
+    }    
+}
+
+//Center
+@mixin center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
