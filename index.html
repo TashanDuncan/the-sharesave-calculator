@@ -29,13 +29,13 @@
             <h2>Share details</h2>
             <form action="">
                 <div class="row">
-                    <div class="col">        
+                    <div class="col-md">        
                             <div class="form-group">
                                 <label for="monthly-savings">Monthly Savings Amount:</label>
                                 <input type="number" id="monthly-savings" name="monthly-savings" min="5" max="500" class="form-control" required>
                             </div>
                     </div>
-                    <div class="col">
+                    <div class="col-md">
                         <div class="form-group">
                             <p>Duration of savings:</p>
                             <div class="form-check form-check-inline">
@@ -50,15 +50,15 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col">
+                    <div class="col-md">
                         <div class="form-group">
-                            <label for="option-price">Option price</label>
+                            <label for="option-price">Option price:</label>
                             <input type="number" id="option-price" name="option-price" class="form-control" min="0" required>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-md">
                         <div class="form-group">
-                            <label for="estimate-price">Estimated share price at sale</label>
+                            <label for="estimate-price">Estimated share price at sale:</label>
                             <input type="number" id="estimate-price" name="estimate-price" class="form-control" min="0" required>
                         </div>
                     </div>
@@ -67,30 +67,31 @@
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                 Launch demo modal
                 </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Disclaimer</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>This calculator is designed to estimate the profit you may receive on your sharesave scheme based on the information you provide to us.</p>
+                            <p>The value of investments and the income from them may fall as well as rise and is not guaranteed. Past performance is not a reliable indicator of future results.</p>
+                            <p>This tool is not advice and should not be used as the basis for making any decisions. Before you make any decisions, we strongly recommend you talk to a financial adviser.</p>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Accept</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
             </form>
         </div>
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Disclaimer</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <p>This calculator is designed to estimate the profit you may receive on your sharesave scheme based on the information you provide to us.</p>
-                    <p>The value of investments and the income from them may fall as well as rise and is not guaranteed. Past performance is not a reliable indicator of future results.</p>
-                    <p>This tool is not advice and should not be used as the basis for making any decisions. Before you make any decisions, we strongly recommend you talk to a financial adviser.</p>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Accept</button>
-                </div>
-            </div>
-            </div>
-        </div>
+
         <footer class="container">
             <h3></h3>
 
