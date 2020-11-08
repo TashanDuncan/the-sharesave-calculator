@@ -25,54 +25,80 @@
             </div>
 
         </main>
-        
-        <form action="" class="container">
-            <div class="row">
-                <div class="col">        
+        <div class="container">
+            <h2>Share details</h2>
+            <form action="">
+                <div class="row">
+                    <div class="col">        
+                            <div class="form-group">
+                                <label for="monthly-savings">Monthly Savings Amount:</label>
+                                <input type="number" id="monthly-savings" name="monthly-savings" min="5" max="500" class="form-control" required>
+                            </div>
+                    </div>
+                    <div class="col">
                         <div class="form-group">
-                            <label for="monthly-savings">Monthly Savings Amount:</label>
-                            <input type="number" id="monthly-savings" name="monthly-savings" min="5" max="500" class="form-control">
-                        </div>
-                </div>
-                <div class="col">
-                    <div class="form-group">
-                        <p>Duration of savings:</p>
-                        <div class="form-check form-check-inline">
-                            <input type="radio" id="saving-3-years" name="savings" value="3" checked class="form-check-input" >
-                            <label for="saving-3-years" class="form-check-label">3 Years</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input type="radio" id="saving-5-years" name="savings" value="5" class="form-check-input" >
-                            <label for="saving-5-years" class="form-check-label">5 Years</label>
+                            <p>Duration of savings:</p>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" id="saving-3-years" name="savings" value="3" class="form-check-input" required>
+                                <label for="saving-3-years" class="form-check-label">3 Years</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" id="saving-5-years" name="savings" value="5" class="form-check-input" required>
+                                <label for="saving-5-years" class="form-check-label">5 Years</label>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="form-group">
-                        <label for="option-price">Option price</label>
-                        <input type="number" id="option-price" name="option-price" class="form-control">
-                      </div>
-                </div>
-                <div class="col">
-                    <div class="form-group">
-                        <label for="estimate-price">Estimated share price at sale</label>
-                        <input type="number" id="estimate-price" name="estimate-price" class="form-control">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="option-price">Option price</label>
+                            <input type="number" id="option-price" name="option-price" class="form-control" min="0" required>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="estimate-price">Estimated share price at sale</label>
+                            <input type="number" id="estimate-price" name="estimate-price" class="form-control" min="0" required>
+                        </div>
                     </div>
                 </div>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Launch demo modal
+                </button>
+            </form>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Discliamer</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <p>This calculator is designed to estimate the profit you may receive on your sharesave scheme based on the information you provide to us.</p>
+                    <p>The value of investments and the income from them may fall as well as rise and is not guaranteed. Past performance is not a reliable indicator of future results.</p>
+                    <p>This tool is not advice and should not be used as the basis for making any decisions. Before you make any decisions, we strongly recommend you talk to a financial adviser.</p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Accept</button>
+                </div>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-
-
-        </form>
-
+            </div>
+        </div>
         <footer class="container">
-            <h3>Discliamer</h3>
-            <p>This calculator is designed to estimate the profit you may receive on your sharesave scheme based on the information you provide to us.<br>
-                The value of investments and the income from them may fall as well as rise and is not guaranteed. Past performance is not a reliable indicator of future results.<br>
-                This tool is not advice and should not be used as the basis for making any decisions. Before you make any decisions, we strongly recommend you talk to a financial adviser.</p>
+            <h3></h3>
+
             <p>Made by Tashan Duncan</p>
         </footer>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
