@@ -26,24 +26,45 @@
 
         </main>
         
-        <form action="">
-            <label for="monthly-savings">Monthly Savings Amount</label>
-            <input type="number" id="monthly-savings" name="monthly-savings" min="5" max="500">
-            <p>Duration of savings</p>
-            <div>
-                <input type="radio" id="saving-3-years" name="savings" value="3"
-                       checked>
-                <label for="saving-3-years">3</label>
-              </div>
-              
-              <div>
-                <input type="radio" id="saving-5-years" name="savings" value="5">
-                <label for="saving-5-years">5</label>
-              </div>
-              <label for="option-price">Option Price</label>
-              <input type="number" id="option-price" name="option-price">
-              <label for="estimate-price">Estimated share price at sale</label>
-              <input type="number" id="estimate-price" name="estimate-price">
+        <form action="" class="container">
+            <div class="row">
+                <div class="col">        
+                        <div class="form-group">
+                            <label for="monthly-savings">Monthly Savings Amount:</label>
+                            <input type="number" id="monthly-savings" name="monthly-savings" min="5" max="500" class="form-control">
+                        </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <p>Duration of savings:</p>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" id="saving-3-years" name="savings" value="3" checked class="form-check-input" >
+                            <label for="saving-3-years" class="form-check-label">3 Years</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" id="saving-5-years" name="savings" value="5" class="form-check-input" >
+                            <label for="saving-5-years" class="form-check-label">5 Years</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="option-price">Option price</label>
+                        <input type="number" id="option-price" name="option-price" class="form-control">
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="estimate-price">Estimated share price at sale</label>
+                        <input type="number" id="estimate-price" name="estimate-price" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+
         </form>
 
         <footer class="container">
