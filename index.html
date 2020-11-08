@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>The ShareSave (SAYE) Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+</head>
+<body>
+    <body>
+        <header>
+            <nav></nav>
+        </header>
+      
+        <main>
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">The ShareSave (SAYE) Calculator</h1>
+                    <p class="lead">The ShareSave (SAVE AS YOU EARN) scheme is a savings-related share scheme where you can buy shares with your savings for a fixed price.<p>
+                    <hr class="my-4">
+                    <p>You can save up to £500 a month under the scheme. At the end of your savings contract (3 or 5 years) you can use the savings to buy shares.</p>
+                    <p>This calculator can be used to get a <i>rough estimate</i> on the profits gained at the end of the contract using this scheme.</p>
+                </div>
+            </div>
+
+        </main>
+        
+        <form action="">
+            <label for="monthly-savings">Monthly Savings Amount</label>
+            <input type="number" id="monthly-savings" name="monthly-savings" min="5" max="500">
+            <p>Duration of savings</p>
+            <div>
+                <input type="radio" id="saving-3-years" name="savings" value="3"
+                       checked>
+                <label for="saving-3-years">3</label>
+              </div>
+              
+              <div>
+                <input type="radio" id="saving-5-years" name="savings" value="5">
+                <label for="saving-5-years">5</label>
+              </div>
+              <label for="option-price">Option Price</label>
+              <input type="number" id="option-price" name="option-price">
+              <label for="estimate-price">Estimated share price at sale</label>
+              <input type="number" id="estimate-price" name="estimate-price">
+        </form>
+
+        <footer class="container">
+            <h3>Discliamer</h3>
+            <p>This calculator is designed to estimate the profit you may receive on your sharesave scheme based on the information you provide to us.<br>
+                The value of investments and the income from them may fall as well as rise and is not guaranteed. Past performance is not a reliable indicator of future results.<br>
+                This tool is not advice and should not be used as the basis for making any decisions. Before you make any decisions, we strongly recommend you talk to a financial adviser.</p>
+            <p>Made by Tashan Duncan</p>
+        </footer>
+</body>
+</html>
