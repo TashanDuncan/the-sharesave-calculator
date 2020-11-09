@@ -26,4 +26,4 @@ const estimatedProfit = () => estimatedReturn() - totalSavings();
 
 const convertToCurrency = (num) =>  `£${Number.parseFloat(num).toFixed(2)}`
 
-
+const percentIncreased = () => `${Number.parseFloat((estimatedReturn() - totalSavings()) / totalSavings()).toFixed(2) * 100}%`
