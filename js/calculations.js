@@ -13,6 +13,7 @@ const totalSavings = () =>{
     return totalSavings;
 }
 
+
 const numberOfOptions = () => {
     const options = document.getElementById("option-price").value;
     const result = totalSavings() / options * 100;
@@ -22,3 +23,7 @@ const numberOfOptions = () => {
 const estimatedReturn = () => numberOfOptions() * document.getElementById('estimate-price').value / 100;
 
 const estimatedProfit = () => estimatedReturn() - totalSavings();
+
+const convertToCurrency = (num) =>  `£${Number.parseFloat(num).toFixed(2)}`
+
+
