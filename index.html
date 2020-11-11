@@ -8,10 +8,27 @@
 </head>
 <body>
     <body>
-        <header>
-            <nav></nav>
-        </header>
-      
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="myModalLabel">Disclaimer</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>This calculator is designed to estimate the profit you may receive on your sharesave scheme based on the information you provide to us.</p>
+                            <p>The value of investments and the income from them may fall as well as rise and is not guaranteed. Past performance is not a reliable indicator of future results.</p>
+                            <p>This tool is not advice and should not be used as the basis for making any decisions. Before you make any decisions, we strongly recommend you talk to a financial adviser.</p>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Accept</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
         <main>
             <div class="jumbotron jumbotron-fluid pb-4 text-capitalize">
                 <div class="container">
@@ -20,7 +37,6 @@
                     <hr class="my-4">
                 </div>
             </div>
-
         </main>
         <div class="container mb-5 text-capitalize">
             <h2>share details</h2>
@@ -63,27 +79,6 @@
                 <button   id="submit" type="submit" class="btn btn-primary">
                 Calculate
                 </button>
-                <!-- Modal -->
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title" id="myModalLabel">Disclaimer</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        </div>
-                        <div class="modal-body">
-                            <p>This calculator is designed to estimate the profit you may receive on your sharesave scheme based on the information you provide to us.</p>
-                            <p>The value of investments and the income from them may fall as well as rise and is not guaranteed. Past performance is not a reliable indicator of future results.</p>
-                            <p>This tool is not advice and should not be used as the basis for making any decisions. Before you make any decisions, we strongly recommend you talk to a financial adviser.</p>
-                        </div>
-                        <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Accept</button>
-                        </div>
-                    </div>
-                    </div>
-                </div>
             </form>
         </div>
         <div id="results" class="container text-capitalize text-center">
