@@ -14,13 +14,11 @@
         </header>
       
         <main>
-            <div class="jumbotron jumbotron-fluid">
+            <div class="jumbotron jumbotron-fluid pb-4">
                 <div class="container">
                     <h1 class="display-4">The shareSave (SAYE) calculator</h1>
                     <p class="lead">The ShareSave (SAVE AS YOU EARN) scheme is a savings-related share scheme where you can buy shares with your savings for a fixed price.<p>
                     <hr class="my-4">
-                    <p>You can save up to £500 a month under the scheme. At the end of your savings contract (3 or 5 years) you can use the savings to buy shares.</p>
-                    <p>This calculator can be used to get a <i>rough estimate</i> on the profits gained at the end of the contract using this scheme.</p>
                 </div>
             </div>
 
@@ -83,7 +81,7 @@
                             <p>This tool is not advice and should not be used as the basis for making any decisions. Before you make any decisions, we strongly recommend you talk to a financial adviser.</p>
                         </div>
                         <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Accept</button>
+                        <button type="button" class="btn btn-primary" id="submit">Accept</button>
                         </div>
                     </div>
                     </div>
@@ -92,7 +90,26 @@
         </div>
         <div class="container">
             <h2>results</h2>
-
+            <div class="d-flex justify-content-center flex-wrap"> 
+                <div class="card m-3" style="width: 18rem;">
+                    <div class="card-body">
+                    <h5 class="card-title">Estimated Return</h5>
+                    <p class="card-text"></p>
+                    </div>
+                </div>
+                <div class="card m-3" style="width: 18rem;">
+                    <div class="card-body">
+                    <h5 class="card-title">Amount Saved</h5>
+                    <p class="card-text"></p>
+                    </div>
+                </div>
+                <div class="card m-3" style="width: 18rem;">
+                    <div class="card-body">
+                    <h5 class="card-title">Profit</h5>
+                    <p class="card-text"></p>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
