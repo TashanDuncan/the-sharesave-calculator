@@ -16,7 +16,7 @@ const totalSavings = () =>{
 
 const numberOfOptions = () => {
     const options = document.getElementById("option-price").value;
-    const result = totalSavings() / options * 100;
+    const result = Number.parseInt(totalSavings() / options * 100);
     return result;
 }
 
