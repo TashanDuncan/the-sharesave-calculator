@@ -1,3 +1,4 @@
+//DOM Variables
 const submit = document.getElementById('submit')
 const returnText = document.getElementById('return')
 const savedText = document.getElementById('saved')
@@ -5,6 +6,7 @@ const profitText = document.getElementById('profit')
 const percentageText = document.getElementById('percent')
 const optionsText = document.getElementById('options')
 
+// Event Listeners
 submit.addEventListener('click', () => {
 
     returnText.textContent = `${convertToCurrency(estimatedReturn())}`;
