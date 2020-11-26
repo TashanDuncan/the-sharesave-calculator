@@ -38,7 +38,11 @@ function convertToCurrency(num) {
 }
 
 function percentIncreased() {
-    return `${Number.parseFloat((estimatedReturn() - totalSavings()) / totalSavings()).toFixed(2) * 100}%`;
+    if(estimatedProfit() === 0){
+        return 0;
+    } else {
+        return Number.parseFloat((estimatedReturn() - totalSavings()) / totalSavings()).toFixed(2) * 100;
+    }
 }
 
 function calculateTax() {
