@@ -16,12 +16,12 @@ const taxfreetext = document.getElementById('tax-free');
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     resultsDiv.classList.remove('d-none');
-    returnText.textContent = `${convertToCurrency(estimatedReturn())}`;
-    savedText.textContent = `${convertToCurrency(totalSavings())}`;
-    profitText.textContent =`${convertToCurrency(estimatedProfit())}`;
+    returnText.textContent = `£${convertToCurrency(estimatedReturn())}`;
+    savedText.textContent = `£${convertToCurrency(totalSavings())}`;
+    profitText.textContent =`£${convertToCurrency(estimatedProfit())}`;
     percentageText.textContent = `${percentIncreased()}%`;
-    optionsText.textContent = `${numberOfOptions()}`;
-    taxText.textContent = `*${convertToCurrency(calculateTax())}`;
-    totalText.textContent = `${convertToCurrency(grandTotal())}`;
-    taxfreetext.textContent = `*Currently the first ${convertToCurrency(taxableIncome)} is tax free`;
+    optionsText.textContent = `${numberWithCommas(numberOfOptions())}`;
+    taxText.textContent = `*£${convertToCurrency(calculateTax())}`;
+    totalText.textContent = `£${convertToCurrency(grandTotal())}`;
+    taxfreetext.textContent = `*Currently the first £${convertToCurrency(taxableIncome)} of profit is tax free`;
 })

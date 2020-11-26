@@ -14,6 +14,9 @@ function totalSavings() {
     return totalSavings;
 }
 
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 
 function numberOfOptions() {
     const options = document.getElementById("option-price").value;
@@ -34,7 +37,8 @@ function estimatedProfit() {
 }
 
 function convertToCurrency(num) {
-    return `£${Number.parseFloat(num).toFixed(2)}`;
+    const decimal = Number.parseFloat(num).toFixed(2);
+    return numberWithCommas(decimal);
 }
 
 function percentIncreased() {
