@@ -34,3 +34,5 @@ const calculateTax = () => {
 
    return taxFree / 10;
 }
+
+const grandTotal = () => estimatedReturn() - calculateTax ();
