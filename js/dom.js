@@ -8,7 +8,8 @@ const percentageText = document.getElementById('percent');
 const optionsText = document.getElementById('options');
 const resultsDiv = document.getElementById('results');
 const taxText = document.getElementById('tax');
-const totalText = document.getElementById('total')
+const totalText = document.getElementById('total');
+const taxfreetext = document.getElementById('tax-free');
 
 // Event Listener
 
@@ -20,6 +21,7 @@ form.addEventListener('submit', (event) => {
     profitText.textContent =`${convertToCurrency(estimatedProfit())}`;
     percentageText.textContent = `${percentIncreased()}`;
     optionsText.textContent = `${numberOfOptions()}`;
-    taxText.textContent = `${convertToCurrency(calculateTax())}`;
+    taxText.textContent = `*${convertToCurrency(calculateTax())}`;
     totalText.textContent = `${convertToCurrency(grandTotal())}`;
+    taxfreetext.textContent = `*Currently the first ${convertToCurrency(taxableIncome)} is tax free`;
 })

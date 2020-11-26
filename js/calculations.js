@@ -31,8 +31,8 @@ const percentIncreased = () => `${Number.parseFloat((estimatedReturn() - totalSa
 
 const calculateTax = () => {
     let taxFree;
-    if (estimatedReturn() > taxableIncome){
-        taxFree = estimatedReturn() - taxableIncome;
+    if (estimatedProfit() > taxableIncome){
+        taxFree = estimatedProfit() - taxableIncome;
         return taxFree / 10;
     } else {
         return 0;
