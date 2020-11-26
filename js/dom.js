@@ -1,3 +1,8 @@
+//Load Modal window
+$(window).on('load',function(){
+    $('#myModal').modal('show');
+});
+
 //DOM Variables
 const form = document.getElementById('myForm');
 const submit = document.getElementById('submit');
