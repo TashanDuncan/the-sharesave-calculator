@@ -10,13 +10,10 @@ const resultsDiv = document.getElementById('results');
 const taxText = document.getElementById('tax');
 const totalText = document.getElementById('total')
 
-//Functions
-function handleForm(event) { event.preventDefault(); } 
+// Event Listener
 
-// Event Listeners
-form.addEventListener('submit', handleForm);
-
-form.addEventListener('submit', () => {
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
     resultsDiv.classList.remove('d-none');
     returnText.textContent = `${convertToCurrency(estimatedReturn())}`;
     savedText.textContent = `${convertToCurrency(totalSavings())}`;
