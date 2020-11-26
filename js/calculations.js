@@ -26,7 +26,11 @@ function estimatedReturn() {
 }
 
 function estimatedProfit() {
-    return estimatedReturn() - totalSavings();
+    if(estimatedReturn() > totalSavings()){
+        return estimatedReturn() - totalSavings();
+    } else {
+        return 0;
+    }
 }
 
 function convertToCurrency(num) {
