@@ -51,8 +51,8 @@ function percentIncreased() {
 
 function calculateTax() {
     let taxableIncome;
-    if (estimatedProfit() > taxableIncome) {
-        taxableIncome = estimatedProfit() - taxableIncome;
+    if (estimatedProfit() > taxFree) {
+        taxableIncome = estimatedProfit() - taxFree;
         return taxableIncome / 10;
     } else {
         return 0;
