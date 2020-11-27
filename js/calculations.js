@@ -1,4 +1,4 @@
-const taxableIncome = 12300;
+const taxFree = 12300;
 
 // Obtain total savings based on monthly saving * duration of savings
 function totalSavings() {
@@ -50,10 +50,10 @@ function percentIncreased() {
 }
 
 function calculateTax() {
-    let taxFree;
+    let taxableIncome;
     if (estimatedProfit() > taxableIncome) {
-        taxFree = estimatedProfit() - taxableIncome;
-        return taxFree / 10;
+        taxableIncome = estimatedProfit() - taxableIncome;
+        return taxableIncome / 10;
     } else {
         return 0;
     }

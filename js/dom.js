@@ -28,5 +28,5 @@ form.addEventListener('submit', (event) => {
     optionsText.textContent = `${numberWithCommas(numberOfOptions())}`;
     taxText.textContent = `*£${convertToCurrency(calculateTax())}`;
     totalText.textContent = `£${convertToCurrency(grandTotal())}`;
-    taxfreetext.textContent = `*Currently the first £${convertToCurrency(taxableIncome)} of profit is tax free`;
+    taxfreetext.textContent = `*Currently the first £${convertToCurrency(taxFree)} of profit is tax free`;
 })
