@@ -1,6 +1,7 @@
 //Load Modal window
 $(window).on('load',function(){
     $('#myModal').modal('show');
+    localLoad();
 });
 
 //DOM Variables
@@ -20,6 +21,7 @@ const taxfreetext = document.getElementById('tax-free');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
+    $('#saveModal').modal('show');
     resultsDiv.classList.remove('d-none');
     returnText.textContent = `£${convertToCurrency(estimatedReturn())}`;
     savedText.textContent = `£${convertToCurrency(totalSavings())}`;
@@ -30,3 +32,42 @@ form.addEventListener('submit', (event) => {
     totalText.textContent = `£${convertToCurrency(grandTotal())}`;
     taxfreetext.textContent = `*Currently the first £${convertToCurrency(taxFree)} of profit is tax free`;
 })
+
+//Local Storage
+const storageSettings = [];
+const monthlySavings = document.getElementById("monthly-savings");
+const saving3 = document.getElementById("saving-3-years");
+const saving5 = document.getElementById("saving-5-years");
+const optionPrice = document.getElementById("option-price");
+const estimatePrice = document.getElementById("estimate-price");
+const saveModal = document.getElementById("saveModal");
+const saveModalText = document.getElementById("saveModalText")
+const saveModalFooter = document.getElementById("saveModalfooter")
+
+
+function localSave() {
+    const modalBackdrop = document.querySelector('.modal-backdrop');
+
+    storageSettings.push(monthlySavings.value);
+    storageSettings.push(saving3.checked);
+    storageSettings.push(saving5.checked);
+    storageSettings.push(optionPrice.value);
+    storageSettings.push(estimatePrice.value);
+    localStorage.setItem('settings', JSON.stringify(storageSettings));
+    saveModalFooter.remove();
+    saveModalText.innerHTML = `<p>Settings saved! &#128516</p>`;
+    
+    setTimeout(function(){saveModal.remove()}, 1000);
+    setTimeout(function(){modalBackdrop.remove()}, 1000);
+    document.body.classList.remove("modal-open");
+}
+
+function localLoad() {
+    let settings = JSON.parse(localStorage.getItem('settings'));
+    monthlySavings.value = settings[0];
+    saving3.checked = settings[1];
+    saving5.checked = settings[2];
+    optionPrice.value = settings[3];
+    estimatePrice.value = settings[4];
+}
+
